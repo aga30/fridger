@@ -1,0 +1,7 @@
+{
+  "name": "fridger",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
