@@ -1,0 +1,35 @@
+.tab-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-wrapper {
+    display: flex;
+    width: calc(50% - 25px);
+}
+
+
+.shopping-icon {
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-left: 2px;
+}
+
+.shopping-icon-add {
+    position: fixed;
+    bottom: 20px;
+    z-index: 11;
+    left: calc(50% - 25px);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px #999;
+    background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+    background-color: #77d42a;
+}

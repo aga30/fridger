@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TabsComponent } from '../../components/tabs/tabs.component';
-import { IonicModule, IonIcon, IonLabel, IonTabs } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular';
+import { MatIconModule } from '@angular/material/icon';
+
 
 
 
 @NgModule({
   declarations: [
-    TabsComponent,
-
-
+    TabsComponent
   ],
   imports: [
     CommonModule,
     IonicModule,
+    MatIconModule
   ],
   exports: [
-    TabsComponent
+    TabsComponent,
+    MatIconModule
   ]
 })
 export class SharedModule { }

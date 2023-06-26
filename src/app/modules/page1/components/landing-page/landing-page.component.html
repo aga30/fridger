@@ -1,4 +1,102 @@
-<div>
-  
+<div class="page-wrapper">
 
+
+  <div class="item-rows-header">
+    <span class="name-row-header">Naziv</span>
+    <span class="amount-row">Količina</span>
+
+  </div>
+  <div class="items-wrapper">
+    <ion-list>
+      <ion-item-sliding *ngFor="let item of (itemsToBuy$ | async)" (ionSwipe)="deleteItem(item)">
+        <ion-item style="display: flex;flex-direction: column;">
+          <div style="width: 100%;">
+            <div class="item-row center" (click)="onExpand(item)">
+              <span class="name-row">{{ item.name }}</span>
+              <span class="amount-row">{{ item.amount }}</span>
+              <div class="extra-icons">
+                <span class="center">
+                  <span class="material-symbols-outlined" [ngClass]="{'turn-red': item.urgent,'turn-off':!item.urgent}">
+                    notification_important
+                  </span>
+                </span>
+                <span class="center">
+                  <span class="material-symbols-outlined" [ngClass]="{'turn-on': item.where,'turn-off':!item.where}">
+                    location_on
+                  </span>
+                </span>
+                <span class="center">
+                  <span class="material-symbols-outlined" [ngClass]="{'turn-on': item.price,'turn-off':!item.price}">
+                    attach_money
+                  </span>
+                </span>
+                <span class="center">
+                  <span class="material-symbols-outlined" [ngClass]="{'turn-on': item.spec,'turn-off':!item.spec}">
+                    info
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div>
+              <div *ngIf="item.expanded" class="expanded-wrapper">
+                <div *ngIf="item.urgent" class="expanded-row-item">
+                  <div class="center">
+                    <span class="material-symbols-outlined"
+                      [ngClass]="{'turn-red': item.urgent,'turn-off':!item.urgent}">
+                      notification_important
+                    </span>
+                  </div>
+                  Kupiti obavezno
+                </div>
+                <div *ngIf="item.where" class="expanded-row-item">
+                  <div class="center">
+                    <span class="material-symbols-outlined" [ngClass]="{'turn-on': item.where,'turn-off':!item.where}">
+                      location_on
+                    </span>
+                  </div>
+                  {{ item.where }}
+                </div>
+                <div *ngIf="item.price" class="expanded-row-item">
+                  <div class="center">
+                    <span class="material-symbols-outlined" [ngClass]="{'turn-on': item.price,'turn-off':!item.price}">
+                      attach_money
+                    </span>
+                  </div>
+                  {{ item.price }}
+                </div>
+                <div *ngIf="item.spec" class="expanded-row-item">
+                  <div class="center">
+                    <span class="material-symbols-outlined" [ngClass]="{'turn-on': item.spec,'turn-off':!item.spec}">
+                      info
+                    </span>
+                  </div>
+                  {{ item.spec }}
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item-options side="end">
+        </ion-item-options>
+      </ion-item-sliding>
+      <div class="item-row-more center">
+        <span class="material-symbols-outlined">
+          more_horiz
+        </span>
+      </div>
+    </ion-list>
+
+   
+  </div>
+  <div class="recomended-wrapper">
+    <swiper [options]="swiperOptions">
+      <ng-container swiperSlide>Slide 1</ng-container>
+      <ng-container swiperSlide>Slide 2</ng-container>
+      <ng-container swiperSlide>Slide 3</ng-container>
+    </swiper>
+    <div *ngFor="let item of (itemsToBuy$ | async)" class="recomended-item">
+      {{item.name}}
+    </div>
+  </div>
 </div>

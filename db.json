@@ -1,0 +1,36 @@
+{
+    "buy": [
+        {
+            "name": "Kiselo mleko",
+            "amount": "1L",
+            "where": "pecenjara",
+            "urgent": false,
+            "spec": "",
+            "price": ""
+        },
+        {
+            "name": "Jogurn",
+            "amount": "1L",
+            "where": "Vukas",
+            "urgent": false,
+            "spec": "",
+            "price": "3.5$"
+        },
+        {
+            "name": "Čips",
+            "amount": "2",
+            "where": "Vukas",
+            "urgent": false,
+            "spec": "samo ljuti",
+            "price": "250 Din."
+        },
+        {
+            "name": "Davidoff",
+            "amount": "1",
+            "where": "Vukas",
+            "urgent": true,
+            "spec": "Kupus, kecap, majonez, paradajz, luk, krastavac, aleva, sol, biber, cumur,",
+            "price": "410"
+        }
+    ]
+}
