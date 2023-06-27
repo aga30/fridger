@@ -16,4 +16,8 @@ export class TestHttpService extends CoreApiService {
   public test1(): Observable<any[]> {
     return this.get('buy');
   }
+
+  public test2(): Observable<any[]> {
+    return this.get('recommend');
+  }
 }

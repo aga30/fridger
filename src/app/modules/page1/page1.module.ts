@@ -5,12 +5,14 @@ import { Page1RoutingModule } from './page1-routing.module';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { SharedModule } from 'src/app/shared/modules/shared/shared.module';
 import { IonicModule } from '@ionic/angular';
-import { SwiperModule } from 'swiper/angular';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 
 
 
 @NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     LandingPageComponent
   ],
@@ -19,7 +21,6 @@ import { SwiperModule } from 'swiper/angular';
     IonicModule,
     Page1RoutingModule,
     SharedModule,
-    SwiperModule
   ]
 })
 export class Page1Module { }

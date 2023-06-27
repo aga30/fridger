@@ -6,7 +6,7 @@
     <span class="amount-row">Količina</span>
 
   </div>
-  <div class="items-wrapper">
+  <div class="items-wrapper" *ngIf="display1$ | async">
     <ion-list>
       <ion-item-sliding *ngFor="let item of (itemsToBuy$ | async)" (ionSwipe)="deleteItem(item)">
         <ion-item style="display: flex;flex-direction: column;">
@@ -87,16 +87,19 @@
       </div>
     </ion-list>
 
-   
+
   </div>
-  <div class="recomended-wrapper">
-    <swiper [options]="swiperOptions">
-      <ng-container swiperSlide>Slide 1</ng-container>
-      <ng-container swiperSlide>Slide 2</ng-container>
-      <ng-container swiperSlide>Slide 3</ng-container>
-    </swiper>
-    <div *ngFor="let item of (itemsToBuy$ | async)" class="recomended-item">
-      {{item.name}}
-    </div>
+  <div class="recomended-wrapper" *ngIf="(display2$ | async) ">
+    <swiper-container #swiperRef class="mySwiper swiper-h" [slidesPerView]="2" space-between="10" pagination="true">
+      <swiper-slide *ngFor="let item of (recommendedItems$ | async)">
+        <swiper-container class="mySwiper2 swiper-v" space-between="50" direction="vertical"
+          (slidechange)="test(item,$event)">
+          <swiper-slide style="padding: 10px;">
+            <div class="item-div">{{item.name}}</div>
+          </swiper-slide>
+          <swiper-slide>Added to cart,slide down to revert</swiper-slide>
+        </swiper-container>
+      </swiper-slide>
+    </swiper-container>
   </div>
 </div>

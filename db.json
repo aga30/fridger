@@ -32,5 +32,39 @@
             "spec": "Kupus, kecap, majonez, paradajz, luk, krastavac, aleva, sol, biber, cumur,",
             "price": "410"
         }
+    ],
+    "recommend": [
+        {
+            "name": "Jabuka",
+            "amount": "3",
+            "where": "",
+            "urgent": false,
+            "spec": "",
+            "price": ""
+        },
+        {
+            "name": "Perek",
+            "amount": "2",
+            "where": "Vega",
+            "urgent": true,
+            "spec": "",
+            "price": "0.5$"
+        },
+        {
+            "name": "Smoki",
+            "amount": "2",
+            "where": "Vukas",
+            "urgent": false,
+            "spec": "samo ljuti",
+            "price": "250 Din."
+        },
+        {
+            "name": "Sobranje",
+            "amount": "1",
+            "where": "Vukas",
+            "urgent": true,
+            "spec": "Kupus, kecap, majonez, paradajz, luk, krastavac, aleva, sol, biber, cumur,",
+            "price": "410"
+        }
     ]
 }
