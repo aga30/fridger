@@ -4,21 +4,20 @@ import { TabsComponent } from '../../components/tabs/tabs.component';
 import { IonicModule } from '@ionic/angular';
 import { MatIconModule } from '@angular/material/icon';
 
-
-
-
 @NgModule({
   declarations: [
-    TabsComponent
+    TabsComponent,
   ],
   imports: [
     CommonModule,
     IonicModule,
-    MatIconModule
+    MatIconModule,
+  ],
+  providers: [
   ],
   exports: [
     TabsComponent,
-    MatIconModule
+    MatIconModule,
   ]
 })
 export class SharedModule { }

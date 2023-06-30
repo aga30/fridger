@@ -35,11 +35,11 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.swiperRef!.nativeElement.swiper.update()
-    },300)
+    }, 300)
   }
 
   ngOnInit() {
-    this.testHttpService.test1().subscribe((value) => {
+    this.testHttpService.test1(1).subscribe((value) => {
       value.forEach(element => {
         element.expanded = false;
       });
@@ -52,7 +52,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
         element.expanded = false;
       });
       this.recommendedItems$.next(value);
-        this.display2$.next(true);
+      this.display2$.next(true);
     })
 
   }

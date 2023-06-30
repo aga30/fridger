@@ -13,8 +13,8 @@ export class TestHttpService extends CoreApiService {
   }
 
 
-  public test1(): Observable<any[]> {
-    return this.get('buy');
+  public test1(id: number): Observable<any[]> {
+    return this.get('shopping-list/' + id);
   }
 
   public test2(): Observable<any[]> {

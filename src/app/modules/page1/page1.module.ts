@@ -7,14 +7,10 @@ import { SharedModule } from 'src/app/shared/modules/shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-
-
-
-
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
-    LandingPageComponent
+    LandingPageComponent,
   ],
   imports: [
     CommonModule,

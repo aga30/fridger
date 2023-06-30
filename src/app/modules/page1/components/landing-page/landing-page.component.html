@@ -10,7 +10,7 @@
     <ion-list>
       <ion-item-sliding *ngFor="let item of (itemsToBuy$ | async)" (ionSwipe)="deleteItem(item)">
         <ion-item style="display: flex;flex-direction: column;">
-          <div style="width: 100%;">
+          <div style="width: 100%;" class="belanosima-text">
             <div class="item-row center" (click)="onExpand(item)">
               <span class="name-row">{{ item.name }}</span>
               <span class="amount-row">{{ item.amount }}</span>
@@ -90,12 +90,13 @@
 
   </div>
   <div class="recomended-wrapper" *ngIf="(display2$ | async) ">
+    <div class="recommended-title">Recommended to buy</div>
     <swiper-container #swiperRef class="mySwiper swiper-h" [slidesPerView]="2" space-between="10" pagination="true">
       <swiper-slide *ngFor="let item of (recommendedItems$ | async)">
         <swiper-container class="mySwiper2 swiper-v" space-between="50" direction="vertical"
           (slidechange)="test(item,$event)">
           <swiper-slide style="padding: 10px;">
-            <div class="item-div">{{item.name}}</div>
+            <div class="item-div">{{item.name }}</div>
           </swiper-slide>
           <swiper-slide>Added to cart,slide down to revert</swiper-slide>
         </swiper-container>
